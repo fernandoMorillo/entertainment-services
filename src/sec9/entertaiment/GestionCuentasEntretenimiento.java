@@ -42,7 +42,7 @@ public class GestionCuentasEntretenimiento {
         System.out.println("Fecha de vencimiento: ");
         String fecha_vencimiento = scanner.nextLine();
 
-        CuentaEntretenimiento nuevaCuenta = new CuentaEntretenimiento(nombreCuenta, tipo, null); // Puedes ajustar la fecha de vencimiento según tus necesidades
+        CuentaEntretenimiento nuevaCuenta = new CuentaEntretenimiento(nombreCuenta, tipo, null);
         cuentasDisponibles.add(nuevaCuenta);
 
         System.out.println("Cuenta ingresada con éxito a la lista de cuentas disponibles para la venta.");
