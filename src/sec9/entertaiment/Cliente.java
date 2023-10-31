@@ -19,4 +19,15 @@ class Cliente {
     public String getNombre() {
         return nombre;
     }
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setNombre (String nuevoNombre) {
+        nombre = nuevoNombre;
+    }
+
+    public void setCorreo (String nuevoCorreo) {
+        correo = nuevoCorreo;
+    }
 }

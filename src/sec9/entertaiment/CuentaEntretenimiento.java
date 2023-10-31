@@ -20,6 +20,14 @@ class CuentaEntretenimiento {
         propietario = cliente;
     }
 
+    public void setNombreCuenta(String nuevoNombreCuenta) {
+        nombreCuenta = nuevoNombreCuenta;
+    }
+
+    public void setTipo(String nuevoTipo) {
+        tipo = nuevoTipo;
+    }
+
     public String getNombreCuenta() {
         return nombreCuenta;
     }
