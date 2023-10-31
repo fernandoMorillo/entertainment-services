@@ -118,7 +118,7 @@ public class GestionCuentasEntretenimiento {
                     // Suponemos que getFechaVencimiento() devuelve la fecha de vencimiento de la cuenta
                     System.out.println("Nombre: " + cuenta.getNombreCuenta());
                     System.out.println("Tipo: " + cuenta.getTipo());
-                    // Puedes agregar más información sobre las cuentas según tus necesidades
+
                 }
             }
         }
@@ -131,7 +131,23 @@ public class GestionCuentasEntretenimiento {
 
     //Metodo para ver Stock cuenta
     public void eliminarCuenta(Scanner scanner) {
+        if (cuentasDisponibles.isEmpty()) {
+            System.out.println("No hay cuentas disponibles para eliminar.");
+            return;
+        }
 
+        System.out.println("Cuentas disponibles para eliminar:");
+        for (int i = 0; i < cuentasDisponibles.size(); i++) {
+            CuentaEntretenimiento cuenta = cuentasDisponibles.get(i);
+            System.out.println((i + 1) + ". Nombre: " + cuenta.getNombreCuenta());
+            System.out.println("   Tipo: " + cuenta.getTipo());
+        }
+
+        System.out.print("Seleccione una cuenta para eliminar (número): ");
+        int cuentaSeleccionada = obtenerEnteroValido(scanner, 1, cuentasDisponibles.size()) - 1;
+
+        CuentaEntretenimiento cuentaEliminada = cuentasDisponibles.remove(cuentaSeleccionada);
+        System.out.println("Cuenta '" + cuentaEliminada.getNombreCuenta() + "' eliminada con éxito.");
     }
 
     //Metodo para ver Stock cuenta

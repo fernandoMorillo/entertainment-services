@@ -81,7 +81,7 @@ public class Main {
         do {
             try {
                 opcion = Integer.parseInt(scanner.nextLine());
-                opcionValida = opcion >= 1 && opcion <= 10;
+                opcionValida = opcion >= 1 && opcion <= 11;
                 if (!opcionValida) {
                     System.out.println("Opción no válida. Intente nuevamente.");
                 }
